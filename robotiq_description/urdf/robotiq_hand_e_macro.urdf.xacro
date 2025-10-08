@@ -88,10 +88,17 @@
           <collision>
             <origin rpy="0 0 0" xyz="${-0.010} ${-0.075/2} ${0.028/2}"/>
             <geometry>
-<!--               <mesh filename="${left_finger_collision}" scale="1.0 1.0 1.0" /> -->
+              <!--               <mesh filename="${left_finger_collision}" scale="1.0 1.0 1.0" /> -->
               <box size="${left_finger_collision_scale}" />
             </geometry>
           </collision>
+          <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="0.5"/>
+            <inertia ixx="0.000001" ixy="0.0" ixz="0.0" 
+                    iyy="0.000001" iyz="0.0" 
+                    izz="0.000001"/>
+          </inertial>
         </link>
         <link name="${prefix}hande_right_finger">
           <visual>
@@ -107,13 +114,28 @@
             <origin rpy="0 0 0" xyz="${0.010} ${-0.075/2} ${0.028/2}"/>
             <geometry>
               <box size="${right_finger_collision_scale}" />
-<!--               <mesh filename="${right_finger_collision}" scale="1.0 1.0 1.0" /> -->
+              <!--               <mesh filename="${right_finger_collision}" scale="1.0 1.0 1.0" /> -->
             </geometry>
           </collision>
+          <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="0.5"/>
+            <inertia ixx="0.000001" ixy="0.0" ixz="0.0" 
+                    iyy="0.000001" iyz="0.0" 
+                    izz="0.000001"/>
+          </inertial>
       </link>
       <!-- virtual joint to model values coming from the gripper to the geometry - gripper uses
       distance between fingers as command and state values -->
-      <link name="${prefix}hande_finger_distance_link" />
+      <link name="${prefix}hande_finger_distance_link">
+        <inertial>
+          <origin xyz="0 0 0" rpy="0 0 0"/>
+          <mass value="0.5"/>
+          <inertia ixx="0.000001" ixy="0.0" ixz="0.0" 
+                  iyy="0.000001" iyz="0.0" 
+                  izz="0.000001"/>
+        </inertial>
+      </link>
       <joint name="${prefix}hande_finger_distance" type="prismatic">
         <axis xyz="1 0 0"/>
         <parent link="${prefix}hand_e_base_link"/>

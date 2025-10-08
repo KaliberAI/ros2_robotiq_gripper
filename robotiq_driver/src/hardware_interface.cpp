@@ -106,7 +106,7 @@ hardware_interface::CallbackReturn RobotiqGripperHardwareInterface::on_init(cons
   if (it == joint.command_interfaces.end())
   {
     RCLCPP_FATAL(kLogger, "Joint '%s' has does not have expected '%s' interface.", joint.name.c_str(),
-                 joint.command_interfaces[0].name.c_str(), hardware_interface::HW_IF_POSITION);
+                 joint.command_interfaces[0].name.c_str());
     return CallbackReturn::ERROR;
   }
 
