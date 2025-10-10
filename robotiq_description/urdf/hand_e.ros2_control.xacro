@@ -78,9 +78,9 @@
         <state_interface name="velocity">
           <param name="initial_value">0.0</param>
         </state_interface>
-      </joint>
+      </joint> -->
 
-      <joint name="${prefix}hande_right_finger_joint">
+      <!-- <joint name="${prefix}hande_right_finger_joint">
         <command_interface name="position">
           <param name="min">0.0</param>
           <param name="max">0.025</param>
