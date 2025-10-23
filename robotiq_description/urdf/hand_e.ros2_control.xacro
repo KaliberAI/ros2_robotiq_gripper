@@ -67,7 +67,7 @@
         </command_interface>
       </joint>
 
-      <!-- <joint name="${prefix}hande_left_finger_joint">
+      <joint name="${prefix}hande_left_finger_joint">
         <command_interface name="position">
           <param name="min">0.0</param>
           <param name="max">0.025</param>
@@ -91,7 +91,7 @@
         <state_interface name="velocity">
           <param name="initial_value">0.0</param>
         </state_interface>
-      </joint> -->
+      </joint>
 
       <!-- Only add this with real and mock hardware mode -->
       <xacro:unless value="${sim_gazebo or sim_isaac}">
