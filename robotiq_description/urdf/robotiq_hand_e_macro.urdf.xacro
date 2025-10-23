@@ -11,7 +11,7 @@
 
     <!-- Gripper macro hand-e -->
     <xacro:macro name="robotiq_hande" params="
-                 prefix parent sim_gazebo *origin
+                 prefix parent *origin
                  left_finger_visual:=default left_finger_collision:=default
                  left_finger_scale:=default left_finger_collision_scale:=default
                  right_finger_visual:=default right_finger_collision:=default

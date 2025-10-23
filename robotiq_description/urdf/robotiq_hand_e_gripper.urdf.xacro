@@ -16,7 +16,7 @@
 
   <!-- Load robot's macro with parameters -->
   <!-- set prefix if multiple robots are used -->
-  <xacro:robotiq_hande prefix="$(arg prefix)" parent="$(arg parent)" sim_gazebo="$(arg sim_gazebo)" >
+  <xacro:robotiq_hande prefix="$(arg prefix)" parent="$(arg parent)" >
     <origin xyz="0 0 0" rpy="0 0 0" />
   </xacro:robotiq_hande>
 
