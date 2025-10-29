@@ -64,6 +64,7 @@
               <origin rpy="0 0 0" xyz="0 0 0"/>
               <geometry>
                   <mesh filename="${file_path}/meshes/collision/hande/hand-e.stl" scale="1.0 1.0 1.0"/>
+                  <!--<mesh filename="${file_path}/meshes/collision/hande/hand-e_convex_hull.stl" scale="1.0 1.0 1.0"/>-->
               </geometry>
           </collision>
       </link>
@@ -85,9 +86,10 @@
             </material>
           </visual>
           <collision>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <origin rpy="0 0 0" xyz="${-0.010} ${-0.075/2} ${0.028/2}"/>
             <geometry>
               <mesh filename="${left_finger_collision}" scale="1.0 1.0 1.0" />
+              <!-- <box size="${left_finger_collision_scale}" /> -->
             </geometry>
           </collision>
           <inertial>
@@ -109,9 +111,10 @@
             </material>
           </visual>
           <collision>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <origin rpy="0 0 0" xyz="${0.010} ${-0.075/2} ${0.028/2}"/>
             <geometry>
               <mesh filename="${right_finger_collision}" scale="1.0 1.0 1.0" />
+              <!-- <box size="${right_finger_collision_scale}" /> -->
             </geometry>
           </collision>
           <inertial>
@@ -139,14 +142,14 @@
         <child link="${prefix}hande_finger_distance_link"/>
         <origin rpy="0 0 0" xyz="0 0 0.099"/>
         <axis xyz="1 0 0"/>
-        <limit effort="180" lower="0.0" upper="${gripper_maximal_stroke}" velocity="0.08"/>
+        <limit effort="180" lower="0.0" upper="${gripper_maximal_stroke}" velocity="0.15"/>
       </joint>
       <joint name="${prefix}hande_left_finger_joint" type="prismatic">
         <origin rpy="0 0 0" xyz="0 0 0.099"/>
         <parent link="${prefix}hand_e_base_link"/>
         <child link="${prefix}hande_left_finger"/>
         <axis xyz="-1 0 0"/>
-        <limit effort="180" lower="0" upper="${gripper_maximal_stroke/2}" velocity="0.08"/>
+        <limit effort="180" lower="0" upper="${gripper_maximal_stroke/2}" velocity="0.15"/>
         <mimic joint="${prefix}hande_finger_distance" multiplier="-0.5" offset="${gripper_maximal_stroke/2}"/>
       </joint>
       <joint name="${prefix}hande_right_finger_joint" type="prismatic">
@@ -154,7 +157,7 @@
         <parent link="${prefix}hand_e_base_link"/>
         <child link="${prefix}hande_right_finger"/>
         <axis xyz="1 0 0"/>
-        <limit effort="180" lower="0" upper="${gripper_maximal_stroke/2}" velocity="0.08"/>
+        <limit effort="180" lower="0" upper="${gripper_maximal_stroke/2}" velocity="0.15"/>
         <mimic joint="${prefix}hande_finger_distance" multiplier="-0.5" offset="${gripper_maximal_stroke/2}"/>
       </joint>
 
