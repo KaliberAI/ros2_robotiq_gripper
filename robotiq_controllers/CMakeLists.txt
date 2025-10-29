@@ -39,6 +39,7 @@ install(
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION bin
 )
+
 install(
   DIRECTORY include/
   DESTINATION include

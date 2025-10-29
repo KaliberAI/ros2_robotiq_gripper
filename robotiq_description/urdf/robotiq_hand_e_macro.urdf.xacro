@@ -6,7 +6,7 @@
       <color rgba="0.7 0.7 0.7 1.0"/>
     </material>
     <material name="dark">
-      <color rgba=".1 0.1 0.1 1.0"/>
+      <color rgba="0.1 0.1 0.1 1.0"/>
     </material>
 
     <!-- Gripper macro hand-e -->
@@ -88,8 +88,8 @@
           <collision>
             <origin rpy="0 0 0" xyz="${-0.010} ${-0.075/2} ${0.028/2}"/>
             <geometry>
-              <!--               <mesh filename="${left_finger_collision}" scale="1.0 1.0 1.0" /> -->
-              <box size="${left_finger_collision_scale}" />
+              <mesh filename="${left_finger_collision}" scale="1.0 1.0 1.0" />
+              <!-- <box size="${left_finger_collision_scale}" /> -->
             </geometry>
           </collision>
           <inertial>
@@ -113,8 +113,8 @@
           <collision>
             <origin rpy="0 0 0" xyz="${0.010} ${-0.075/2} ${0.028/2}"/>
             <geometry>
-              <box size="${right_finger_collision_scale}" />
-              <!--               <mesh filename="${right_finger_collision}" scale="1.0 1.0 1.0" /> -->
+              <mesh filename="${right_finger_collision}" scale="1.0 1.0 1.0" />
+              <!-- <box size="${right_finger_collision_scale}" /> -->
             </geometry>
           </collision>
           <inertial>

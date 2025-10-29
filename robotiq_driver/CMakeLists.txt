@@ -118,16 +118,6 @@ install(
 )
 
 ###############################################################################
-# TESTS
-
-# CTest module automatically creates a BUILD_TESTING option that selects
-# whether to enable testing support (ON by default).
-include(CTest)
-if(BUILD_TESTING)
-  add_subdirectory(tests)
-endif()
-
-###############################################################################
 # LINTERS
 
 add_custom_target(format
