@@ -29,8 +29,6 @@ include_directories(include)
 
 add_library(${PROJECT_NAME} SHARED
   src/robotiq_activation_controller.cpp
-  src/left_finger_mimic_controller.cpp
-  src/right_finger_mimic_controller.cpp
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE

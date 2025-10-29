@@ -6,18 +6,4 @@
       Controller for activating Robotiq grippers
     </description>
   </class>
-
-  <class name="robotiq_controllers/LeftFingerMimicController" 
-         type="robotiq_controllers::LeftFingerMimicController" 
-         base_class_type="controller_interface::ControllerInterface">
-    <description>Mimic controller for left finger</description>
-  </class>
-
-  <class name="robotiq_controllers/RightFingerMimicController" 
-         type="robotiq_controllers::RightFingerMimicController" 
-         base_class_type="controller_interface::ControllerInterface">
-    <description>Mimic controller for right finger</description>
-  </class>
-
-
 </library>
