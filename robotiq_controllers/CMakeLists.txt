@@ -8,21 +8,11 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(controller_interface REQUIRED)
-find_package(hardware_interface REQUIRED)
-find_package(pluginlib REQUIRED)
-find_package(rclcpp REQUIRED)
-find_package(rclcpp_lifecycle REQUIRED)
 find_package(std_srvs REQUIRED)
-find_package(std_msgs REQUIRED)
 
 set(THIS_PACKAGE_INCLUDE_DEPENDS
   controller_interface
-  hardware_interface
-  pluginlib
-  rclcpp
-  rclcpp_lifecycle
   std_srvs
-  std_msgs
 )
 
 include_directories(include)
@@ -53,12 +43,6 @@ install(
 install(
   DIRECTORY include/
   DESTINATION include
-)
-
-install(
-  DIRECTORY config launch
-  DESTINATION share/${PROJECT_NAME}
-  OPTIONAL
 )
 
 if(BUILD_TESTING)
